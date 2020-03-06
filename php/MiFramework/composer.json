@@ -1,0 +1,8 @@
+{
+    "name": "academia/mi-framework",
+    "description": "Un framework que trabaja con templates y routes",
+    "type": "project",
+    "require": {
+        "phpunit/phpunit": "^8.5"
+    }
+}

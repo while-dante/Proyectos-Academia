@@ -1,0 +1,20 @@
+<html>
+
+<head><title>Articulos</title></head>
+
+<body>
+
+<p><a href="./logout.php">{{salida}}</a><br><br><a href="./verCarro.php">{{carro}}</a></p>
+
+<h2>{{titulo}}</h2>
+
+<ul>
+
+{{contenido}}
+
+</ul>
+
+<a href="./verCarro.php">{{carro}}</a>
+</body>
+
+</html>

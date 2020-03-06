@@ -1,0 +1,18 @@
+{
+    "name": "academia/examen2",
+    "description": "Examen de Enero, pagina web, Slim, tests, etc.",
+    "type": "project",
+
+    "autoload": {
+        "psr-4": {
+            "Decorator\\": "concesionaria/decorators/",
+            "Tests\\": "ahorcado/tests/",
+            "Library\\": "ahorcado/lib/"
+        }
+    },
+    "require": {
+        "slim/slim": "^4.4",
+        "slim/psr7": "^1.0",
+        "phpunit/phpunit": "^8.5"
+    }
+}

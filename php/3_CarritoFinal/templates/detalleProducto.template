@@ -1,0 +1,3 @@
+<hr>
+<li>{{nombre}} - ${{precio}} - En carro: {{cantidad}}</li>
+<a href=./index.php?page=carro&idProducto={{id}}>{{agregar}}</a><p><br></p>

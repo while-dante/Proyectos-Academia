@@ -1,0 +1,8 @@
+{
+    "name": "academia/concesionaria",
+    "description": "Tests de la clase Concesionaria de Dario para el examen",
+    "type": "project",
+    "require": {
+        "phpunit/phpunit": "^8.5"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "academia/imagenes",
+    "description": "Sitio web que toma URLs de imagenes, les caguarda y las muestra",
+
+    "autoload": {
+        "psr-4": {
+            "Library\\": "lib/"
+        }
+    },
+    "require": {
+        "slim/slim": "^4.4",
+        "slim/psr7": "^1.0"
+    }
+}

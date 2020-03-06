@@ -1,0 +1,13 @@
+<html>
+
+<head><title>Registrar Usuario</title></head>
+
+<body>
+
+    {{mensaje}}
+
+    <a href=./login.php>{{ingresar}}</a>
+
+</body>
+
+</html>

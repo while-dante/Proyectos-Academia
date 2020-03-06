@@ -1,0 +1,8 @@
+{
+    "name": "academia/billetera",
+    "description": "Vamos a hacer una billetera",
+    "type": "project",
+    "require": {
+        "phpunit/phpunit": "^8.5"
+    }
+}

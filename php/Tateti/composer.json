@@ -1,0 +1,8 @@
+{
+    "name": "academia/tateti",
+    "description": "Un juego de Tateti con Objetos",
+    "type": "project",
+    "require": {
+        "phpunit/phpunit": "^8.5"
+    }
+}

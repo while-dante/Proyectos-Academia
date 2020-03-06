@@ -1,0 +1,16 @@
+{
+    "name": "academia/carrito",
+    "description": "carrito de compras con el framework Slim",
+    "type": "project",
+
+    "autoload": {
+        "psr-4": {
+            "Library\\": "lib/"
+        }
+    },
+
+    "require": {
+        "slim/slim": "^4.4",
+        "slim/psr7": "^1.0"
+    }
+}

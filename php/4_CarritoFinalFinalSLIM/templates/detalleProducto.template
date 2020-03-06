@@ -1,0 +1,3 @@
+<hr>
+<li>{{nombre}} - ${{precio}} - En carro: {{cantidad}}</li>
+<a href=carro/{{id}}>{{agregar}}</a><p><br></p>

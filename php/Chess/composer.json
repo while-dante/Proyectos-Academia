@@ -1,0 +1,17 @@
+{
+    "name": "dante/ajedrez",
+    "description": "un ajedrez xd",
+    "type": "project",
+
+    "autoload": {
+        "psr-4": {
+            "Interfaz\\": "interfaces/",
+            "Objeto\\": "objetos/",
+            "Test\\": "tests/"
+        }
+    },
+
+    "require": {
+        "phpunit/phpunit": "*"
+    }
+}

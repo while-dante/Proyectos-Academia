@@ -1,0 +1,16 @@
+{
+    "name": "academia/carrito",
+    "description": "Carrito de compras para web",
+    "type": "project",
+
+    "autoload":{
+        "psr-4":{
+            "Carro\\": "src/paginas",
+            "Library\\": "lib/",
+            "Templates\\": "templates/",
+            "Interfaces\\": "lib/int"
+        }
+    },
+
+    "require": {}
+}

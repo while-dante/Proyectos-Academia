@@ -1,0 +1,34 @@
+<html>
+
+<head>
+
+<title> PlayBook: {{PLAYBOOK}} </title>
+
+</head>
+
+<body>
+
+<h1>{{PLAYBOOK}}</h1>
+
+<h5> <i>{{SUMMARY}}</i> </h5>
+
+<h3> Name: {{NAME}} </h3>
+
+<h4> <b>{{STATNAME1}}:</b> {{STATVALUE1}} </h4>
+<h4> <b>{{STATNAME2}}:</b> {{STATVALUE2}} </h4>
+<h4> <b>{{STATNAME3}}:</b> {{STATVALUE3}} </h4>
+<h4> <b>{{STATNAME4}}:</b> {{STATVALUE4}} </h4>
+
+<h3>{{PLAYBOOK}} Moves:</h3>
+
+<h3>{{MOVENAME1}}</h3>
+<p><b>When {{TRIGGER1}}:</b> {{DESCRIPTION1}}</p>
+<p><br></p>
+<h3>{{MOVENAME2}}</h3>
+<p><b>When {{TRIGGER2}}:</b> {{DESCRIPTION2}}</p>
+<p><br></p>
+<h3>{{MOVENAME3}}</h3>
+<p><b>When {{TRIGGER3}}:</b> {{DESCRIPTION3}}</p>
+
+</body>
+</html>

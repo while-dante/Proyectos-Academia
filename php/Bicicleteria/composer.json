@@ -1,0 +1,8 @@
+{
+    "name": "academia/bicicleteria",
+    "description": "simulacro de examen",
+    "type": "project",
+    "require": {
+        "phpunit/phpunit": "^8.5"
+    }
+}

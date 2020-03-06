@@ -1,0 +1,8 @@
+{
+    "name": "pelusod/mongo",
+    "description": "probamos algo con Mongo",
+    "type": "project",
+    "require": {
+        "mongodb/mongodb": "^1.5"
+    }
+}

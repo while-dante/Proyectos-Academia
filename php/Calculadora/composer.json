@@ -1,0 +1,8 @@
+{
+    "name": "academia/calculadora",
+    "description": "Testeo de clase calculadora",
+    "type": "project",
+    "require": {
+        "phpunit/phpunit": "^8.5"
+    }
+}

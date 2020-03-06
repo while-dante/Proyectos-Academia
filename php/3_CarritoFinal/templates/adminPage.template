@@ -1,0 +1,14 @@
+<html>
+
+<head><title>{{cabecera}}</title></head>
+
+<body {{color}};">
+    <h1 style="text-align: center;">{{bienvenida}}</h1>
+
+    <form style="text-align: center;" action="index.php?page=admiPage" method="POST">
+        <label>Color</label><input type="text" name="color"/>
+        <input type="submit" value="Aplicar"/>
+    </form>
+</body>
+
+</html>

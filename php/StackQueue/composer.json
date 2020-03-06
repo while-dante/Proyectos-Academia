@@ -1,0 +1,15 @@
+{
+    "name": "pelusod/stack-queue",
+    "description": "clases stack y queue con sus tests",
+    "type": "project",
+
+    "autoload":{
+        "psr-4": {
+            "Tests\\": "tests/",
+            "TaskManager\\": "taskManagers/"
+        }
+    },
+    "require": {
+        "phpunit/phpunit": "*"
+    }
+}

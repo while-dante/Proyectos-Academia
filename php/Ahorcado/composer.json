@@ -1,0 +1,8 @@
+{
+    "name": "academia/ahorcado",
+    "description": "Juego de Ahorcado",
+    "type": "project",
+    "require": {
+        "phpunit/phpunit": "^8.5"
+    }
+}

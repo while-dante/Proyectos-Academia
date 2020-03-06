@@ -1,0 +1,11 @@
+<hr>
+
+<li>Articulo: {{nombre}}<br>
+
+<ul>
+    <li>Cantidad: {{cantidad}}</li>
+    <li>Total: {{subtotal}}</li><br>
+    <li><a href=/carroSacar/{{id}}>{{sacar}}</a></li><br>
+</ul>
+</li>
+

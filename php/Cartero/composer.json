@@ -1,0 +1,18 @@
+{
+    "name": "dante/cartero",
+    "description": "un cartero que entrega cartas a direcciones",
+    "type": "project",
+    "require": {
+        "slim/slim": "*",
+        "slim/psr7": "*",
+        "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Services\\": "src/services/",
+            "Models\\": "src/models/",
+            "Tests\\": "src/tests/",
+            "Interfaces\\": "src/interfaces"
+        }
+    }
+}

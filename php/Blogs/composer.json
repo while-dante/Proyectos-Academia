@@ -1,0 +1,23 @@
+{
+    "name": "academia/blogs",
+    "type": "project",
+    "authors": [
+        {
+            "name": "while-dante",
+            "email": "dantepeluso1@gmail.com"
+        }
+    ],
+
+    "autoload": {
+        "psr-4": {
+            "Library\\": "lib/",
+            "Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "phpunit/phpunit": "^8.5",
+        "slim/slim": "^4.4",
+        "slim/psr7": "^1.0",
+        "mongodb/mongodb": "^1.6"
+    }
+}

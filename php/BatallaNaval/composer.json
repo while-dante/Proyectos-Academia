@@ -1,0 +1,8 @@
+{
+    "name": "academia/batalla-naval",
+    "description": "Juego de Batalla naval",
+    "type": "project",
+    "require": {
+        "phpunit/phpunit": "^8.5"
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "name": "academia/load-balancer",
+    "description": "Simulamos un Load Balancer con php, un pasamanos de llamados.",
+    "type": "project",
+
+    "autoload": {
+        "psr-4": {
+            "LB\\": "lib/",
+            "Interfaces\\": "lib/int/",
+            "Servers\\": "servers/",
+            "Strategies\\": "strategies/",
+            "Tests\\": "tests/"
+        }
+    },
+
+    "require": {
+        "phpunit/phpunit": "^8.5",
+        "slim/slim": "^4.4",
+        "slim/psr7": "^1.0"
+    }
+}

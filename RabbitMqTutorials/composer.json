@@ -1,0 +1,8 @@
+{
+    "name": "pelusod/rabbit-mq-tutorials",
+    "description": "tutoriales de Rabbitmq, colas, queues, kiwis, coiooioioooiiiii",
+    "type": "project",
+    "require": {
+        "php-amqplib/php-amqplib": "^2.11"
+    }
+}
