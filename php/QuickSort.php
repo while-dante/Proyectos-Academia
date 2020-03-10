@@ -1,33 +1,53 @@
 <?php
 
-function quickSort($list){
-    $length = count($list);
-    $pivot = $list[$length-1];
-    $i = -1;
+class QuickSort{
+    private $list = array();
+    private $first;
+    private $last;
 
-    for($j=0;$j<$length-1;$j++){
-        if($list[$j]<$pivot){
-            $i++;
-            $a = $list[$j];
-            $list[$j] = $list[$i];
-            $list[$i] = $a;
-        }
+    public function __construct($list){
+        $this->list = $list;
+        $this->first = array_search(array_shift($list),$this->list);
+        $this->last = array_search(array_pop($list),$this->list);
     }
 
-    $newList = array_slice($list,0,$i+1);
-    if($i<$length-1){
-        $newList[] = $pivot;
-        foreach(array_slice($list,$i+1,$length-$i-2) as $element){
-            $newList[] = $element;
-        }
+    private function swap($i,$j){
+        $temp = $this->list[$i];
+        $this->list[$i] = $this->list[$j];
+        $this->list[$j] = $temp;
+        return True;
     }
-    
-    return $newList;
+
+    private function partition($first,$last){
+        $i = $first-1;
+        $pivot = $this->list[$last];
+        for($j=$first;$j<$last;$j++){
+            if($this->list[$j]<$pivot){
+                $i++;
+                $this->swap($i,$j);
+            }
+        }
+        $this->swap($i+1,$last);
+        return $i+1;
+    }
+
+    private function quickSort($first,$last){
+        if($first<$last){
+            $pivotIndex = $this->partition($first,$last);
+            $this->quickSort($first,$pivotIndex-1);
+            $this->quickSort($pivotIndex+1,$last);
+        }
+        return True;
+    }
+
+    public function sort(){
+        $this->quickSort($this->first,$this->last);
+        return $this->list;
+    }
 }
 
-$numbers = range(1,5);
-shuffle($numbers);
-print_r($numbers);
-echo "\n";
-$numbersSorted = quickSort($numbers);
-print_r($numbersSorted);
+$list = range(0,100000);
+shuffle($list);
+$quickSort = new QuickSort($list);
+$sortedList = $quickSort->sort();
+print_r($sortedList);

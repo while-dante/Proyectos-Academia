@@ -22,7 +22,7 @@ function bubbleSortAscendingOrder($list){
     return $list;
 }
 
-$numbers = range(0,10);
+$numbers = range(0,100);
 shuffle($numbers);
 print_r($numbers);
 echo "\n";
