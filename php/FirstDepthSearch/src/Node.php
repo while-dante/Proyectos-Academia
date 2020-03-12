@@ -67,6 +67,16 @@ class Node implements INode{
         return $this->neighbours;
     }
 
+    public function rotateNeighbours(){
+        
+        if(count($this->neighbours) > 1){
+            $first = array_shift($this->neighbours);
+            $this->neighbours[] = $first;
+            return True;
+        }
+        return False;
+    }
+
     private function getCalled(){
         return $this->called;
     }
