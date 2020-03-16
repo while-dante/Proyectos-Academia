@@ -2,14 +2,14 @@
 
 namespace Tests;
 
-use Node\DFS;
 use PHPUnit\Framework\TestCase;
 use \Node\Node;
+use Searcher\DFS as SearcherDFS;
 
-final class FDSTest extends TestCase{
+final class DFSTest extends TestCase{
     
     protected function setUp(): void{
-        $this->searcher = new DFS;
+        $this->searcher = new SearcherDFS;
         $this->A = new Node('A');
         $this->B = new Node('B');
         $this->C = new Node('C');
@@ -21,7 +21,6 @@ final class FDSTest extends TestCase{
 
     public function testSearchOneNode(){
         $visited = $this->searcher->search($this->A);
-        // $visited = $this->searcher->getVisited();
         $this->searcher->clear();
         $this->assertEquals(['A'],$visited);
     }
@@ -30,13 +29,11 @@ final class FDSTest extends TestCase{
         $this->A->connect($this->B);
         $this->A->connect($this->C);
         $visited = $this->searcher->search($this->A);
-        // $visited = $this->searcher->getVisited();
         $expected = ['A','B','C'];
         $this->searcher->clear();
         $this->assertEquals($expected,$visited);
 
         $visited = $this->searcher->search($this->C);
-        // $visited = $this->searcher->getVisited();
         $expected = ['C','A','B'];
         $this->assertEquals($expected,$visited);
     }
@@ -47,19 +44,16 @@ final class FDSTest extends TestCase{
         $this->B->connect($this->C);
 
         $visited = $this->searcher->search($this->A);
-        // $visited = $this->searcher->getVisited();
         $expected = ['A','B','C'];
         $this->searcher->clear();
         $this->assertEquals($expected,$visited);
 
         $visited = $this->searcher->search($this->B);
-        // $visited = $this->searcher->getVisited();
         $expected = ['B','A','C'];
         $this->searcher->clear();
         $this->assertEquals($expected,$visited);
 
         $visited = $this->searcher->search($this->C);
-        // $visited = $this->searcher->getVisited();
         $expected = ['C','A','B'];
         $this->searcher->clear();
         $this->assertEquals($expected,$visited);
@@ -75,7 +69,6 @@ final class FDSTest extends TestCase{
         $this->D->connect($this->A);
 
         $visited = $this->searcher->search($this->E);
-        // $visited = $this->searcher->getVisited();
         $expected = ['E','C','D','B','A','F'];
         $this->searcher->clear();
         $this->assertEquals($expected,$visited);
@@ -83,7 +76,6 @@ final class FDSTest extends TestCase{
         $this->F->disconnect($this->A);
 
         $visited = $this->searcher->search($this->A);
-        // $visited = $this->searcher->getVisited();
         $expected = ['A','D','C','E','B','F'];
         $this->searcher->clear();
         $this->assertEquals($expected,$visited);
@@ -100,13 +92,11 @@ final class FDSTest extends TestCase{
         $this->F->connect($this->B);
 
         $visited = $this->searcher->search($this->D);
-        // $visited = $this->searcher->getVisited();
         $expected = ['D','F','C','A','E','G','B'];
         $this->searcher->clear();
         $this->assertEquals($expected,$visited);
 
         $visited = $this->searcher->search($this->A);
-        // $visited = $this->searcher->getVisited();
         $expected = ['A','C','E','G','F','D','B'];
         $this->searcher->clear();
         $this->assertEquals($expected,$visited);
