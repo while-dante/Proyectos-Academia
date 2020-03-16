@@ -1,0 +1,16 @@
+{
+    "name": "dante/monsterfactory",
+    "description": "una fabrica de mostros vieji",
+    "type": "project",
+    "require": {
+        "phpunit/phpunit": "^8.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Monster\\": "src/monsters/",
+            "Int\\": "interfaces/",
+            "Test\\": "tests/",
+            "Resource\\": "resources/"
+        }
+    }
+}
