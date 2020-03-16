@@ -1,6 +1,6 @@
 <?php
 
-namespace Node;
+namespace Searcher;
 
 use Node\Node;
 

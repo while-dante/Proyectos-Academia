@@ -1,34 +1,28 @@
 <?php
 
-namespace Node;
+namespace Searcher;
 
 use Node\Node;
 
 class DFS{
 
-    private $visitedNodes = array();
-
     public function search(Node $node, $target = null){
+        $visitedNodes = array();
         $nodeId = $node->getId();
 
         if($nodeId == $target){
-            $this->visitedNodes[] = $nodeId;
+            $visitedNodes[] = $nodeId;
 
-            return $this->visitedNodes;
+            return $visitedNodes;
         }
-        if(!in_array($nodeId,$this->visitedNodes)){
-            $this->visitedNodes[] = $nodeId;
+        if(!in_array($nodeId,$visitedNodes)){
+            $visitedNodes[] = $nodeId;
             $neighbours = $node->getNeighbours();
             
             foreach($neighbours as $neighbour){
                 $this->search($neighbour,$target);
             }
         }
-        return $this->visitedNodes;
-    }
-
-    public function clear(){
-        $this->visitedNodes = array();
-        return True;
+        return $visitedNodes;
     }
 }
