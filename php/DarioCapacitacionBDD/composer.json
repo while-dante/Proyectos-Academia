@@ -1,0 +1,17 @@
+{
+    "name": "dante/bdd",
+    "description": "un tateti hecho con tdd y con bdd para luego ayudar a dario ca hacer una capacitacion de bdd",
+    "type": "project",
+    "require": {
+        "phpunit/phpunit": "^8.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Juego\\": "juegos/",
+            "Test\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "behat/behat": "^3.6"
+    }
+}
