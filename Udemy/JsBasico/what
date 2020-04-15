@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="demo"></p>
+        <script>
+            var cars = new Array("Ford","Renault","Peugeot");
+            document.getElementById("demo").innerHTML = cars;
+        </script>
+    </body>
+</html>
