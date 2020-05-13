@@ -9,11 +9,11 @@ import random as rn
 
 #Creo el avion
 
-def crear_avion(n_asientos):
+def crearAvion(nAsientos):
     avion = []
     i = 0
     
-    while i < n_asientos:
+    while i < nAsientos:
         avion.append(-1)
         i = i + 1
         
@@ -22,11 +22,11 @@ def crear_avion(n_asientos):
 #Hago la fila de pasajeros, llegan a la cola en orden aleatorio
 #Cada uno tiene un numero asignado
     
-def crear_fila(n_asientos):
+def crearFila(nAsientos):
     fila = []
     i = 0
     
-    while i < n_asientos:
+    while i < nAsientos:
         fila.append(i)
         i = i + 1
         
@@ -35,13 +35,13 @@ def crear_fila(n_asientos):
 
 #Guardo el ultimo de la fila
 
-def ver_ultimo(fila):
+def verUltimo(fila):
     ultimo = fila[len(fila) - 1]
     return ultimo
 
 #Me fijo en los asientos libres
 
-def asientos_libres(avion):
+def asientosLibres(avion):
     libres = []
     i = 0
     
@@ -59,7 +59,7 @@ def sentar(avion,pasajeros):
     pasajeros.pop(0)
     
     while len(pasajeros) > 0:
-        libres = asientos_libres(avion)
+        libres = asientosLibres(avion)
         
         if avion[pasajeros[0]] == -1:
             avion[pasajeros[0]] = pasajeros[0]
@@ -69,7 +69,7 @@ def sentar(avion,pasajeros):
 
 #Me fijo si el ultimo de la fila esta en su lugar
 
-def chequear_ultimo(avion,fila,ultimo):
+def chequearUltimo(avion,fila,ultimo):
     if avion[ultimo] == ultimo:
         return True
     else:
@@ -77,23 +77,23 @@ def chequear_ultimo(avion,fila,ultimo):
 
 #Hago todo el proceso junto
         
-def abordaje(n_asientos):
+def abordaje(nAsientos):
     
-    avion = crear_avion(n_asientos)
-    fila = crear_fila(n_asientos)
-    ultimo = ver_ultimo(fila)
+    avion = crearAvion(nAsientos)
+    fila = crearFila(nAsientos)
+    ultimo = verUltimo(fila)
     
     sentar(avion,fila)
-    return chequear_ultimo(avion, fila, ultimo)
+    return chequearUltimo(avion, fila, ultimo)
 
 #Repito el proceso y calculo la probabilidad
 
-def probabilidad_ultimo_bien_sentado(n_asientos,n_repeticiones):
+def probabilidadUltimoBienSentado(nAsientos,nRepeticiones):
     i = 0
     resultados = []
     
-    while i < n_repeticiones:
-        resultados.append(abordaje(n_asientos))
+    while i < nRepeticiones:
+        resultados.append(abordaje(nAsientos))
         i = i + 1
     
     verdaderos = 0
@@ -102,21 +102,21 @@ def probabilidad_ultimo_bien_sentado(n_asientos,n_repeticiones):
         if resultado == True:
             verdaderos = verdaderos + 1
     
-    proba = verdaderos/n_repeticiones
+    proba = verdaderos/nRepeticiones
     
     return proba
 
-n_asientos = 100
-n_repeticiones = 10000
+nAsientos = 100
+nRepeticiones = 10000
 
-proba = probabilidad_ultimo_bien_sentado(n_asientos, n_repeticiones)
+proba = probabilidadUltimoBienSentado(nAsientos, nRepeticiones)
 
 print("Probabilidad de que el ultimo en la fila se siente en su asiento:",proba)
 
 #%%
 
-def test_avion():
-    avion = crear_avion(100)
+def testAvion():
+    avion = crearAvion(100)
     assert len(avion) == 100
     
     i = 0
@@ -124,10 +124,10 @@ def test_avion():
         assert avion[i] == -1
         i = i + 1
 
-test_avion()
+testAvion()
 
-def test_fila():
-    fila = crear_fila(100)
+def testFila():
+    fila = crearFila(100)
     assert len(fila) == 100
     
     i = 0
@@ -135,23 +135,23 @@ def test_fila():
         assert i in fila
         i = i + 1
 
-test_fila()
+testFila()
 
-def test_ver_ultimo():
-    fila = crear_fila(100)
-    ultimo = ver_ultimo(fila)
+def testVerUltimo():
+    fila = crearFila(100)
+    ultimo = verUltimo(fila)
     assert ultimo == fila[len(fila)-1]
 
-test_ver_ultimo()
+testVerUltimo()
 
-def test_asientos_libres():
+def testAsientosLibres():
     avion = [-1,1,-11,-1]
-    libres = asientos_libres(avion)
+    libres = asientosLibres(avion)
     assert libres == [0,3]
 
-test_asientos_libres()
+testAsientosLibres()
 
-def test_sentar():
+def testSentar():
     avion = [-1,-1,-1,-1,-1]
     pasajeros = [0,1,2,3,4]
     sentar(avion,pasajeros)
@@ -159,19 +159,19 @@ def test_sentar():
     for pasajero in pasajeros:
         assert pasajero in avion
 
-test_sentar()
+testSentar()
 
-def test_chequear_ultimo():
+def testChequearUltimo():
     fila = [2,5,4,0,3,1]
-    ultimo = ver_ultimo(fila)
+    ultimo = verUltimo(fila)
     
     avionT = [0,1,3,4,2,5]
     avionF = [0,2,3,1,5,4]
     
-    assert chequear_ultimo(avionT, fila,ultimo) == True
-    assert chequear_ultimo(avionF, fila,ultimo) == False
+    assert chequearUltimo(avionT, fila,ultimo) == True
+    assert chequearUltimo(avionF, fila,ultimo) == False
 
-test_chequear_ultimo()
+testChequearUltimo()
 
     
     
